@@ -1,0 +1,4 @@
+﻿main.obj : error LNK2019: unresolved external symbol "__declspec(dllimport) public: void __cdecl Indev::IndevApp::Run(void)" (__imp_?Run@IndevApp@Indev@@QEAAXXZ) referenced in function main
+main.obj : error LNK2019: unresolved external symbol "__declspec(dllimport) public: __cdecl Indev::IndevApp::IndevApp(void)" (__imp_??0IndevApp@Indev@@QEAA@XZ) referenced in function "public: __cdecl SpringApp::SpringApp(void)" (??0SpringApp@@QEAA@XZ)
+main.obj : error LNK2001: unresolved external symbol "public: virtual void __cdecl Indev::IndevApp::OnUpdate(void)" (?OnUpdate@IndevApp@Indev@@UEAAXXZ)
+C:\Users\handy\source\repos\Spring22\x64\Debug\Spring22.exe : fatal error LNK1120: 3 unresolved externals

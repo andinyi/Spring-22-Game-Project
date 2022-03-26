@@ -2,7 +2,7 @@
 <Project>
   <ProjectOutputs>
     <ProjectOutput>
-      <FullPath>C:\Users\handy\source\repos\Spring22\glfw\build\src\Release\glfw3.dll</FullPath>
+      <FullPath>C:\Users\handy\source\repos\Spring22\x64\Release\glfw3.dll</FullPath>
     </ProjectOutput>
     <ProjectOutput>
       <FullPath>C:\Users\handy\source\repos\Spring22\x64\Release\Indev.dll</FullPath>

@@ -1,8 +1,7 @@
 #include "pch.h"
 #include "IndevApp.h"
-#include <iostream>
 #include "GLFW/glfw3.h"
-
+#include "GameWindow.h"
 
 namespace Indev
 {
@@ -10,21 +9,17 @@ namespace Indev
 	{
 		INDEV_LOG("Currently running.."); 
 
-		if (!glfwInit()) 
-		{
-			//Initialization failed
-			INDEV_LOG("GLFW failed to initialize");
-		}
+		Indev::GameWindow::Init();
 
 		GLFWwindow* window;
 
-		window = glfwCreateWindow(800, 600, "game window", NULL, NULL);
+		Indev::GameWindow::GetWindow()->CreateWindow(800, 600, "game window");
 
 		while (true) 
 		{
 			OnUpdate();
-			glfwSwapBuffers(window);
-			glfwPollEvents();
+			Indev::GameWindow::GetWindow()->SwapBuffers();
+			Indev::GameWindow::GetWindow()->CollectEvents();
 		}
 	}
 	void IndevApp::OnUpdate()

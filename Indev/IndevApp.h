@@ -8,7 +8,9 @@ namespace Indev
 	public: 
 		void Run();
 		virtual void OnUpdate();
-		
+	
+	private:
+
 	};
 }
 

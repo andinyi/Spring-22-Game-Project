@@ -1,9 +1,10 @@
 #pragma once
 #include "WindowImplementation.h"
+#include "IndevUtility.h"
 
 namespace Indev 
 {
-	class GameWindow
+	class INDEV_API GameWindow
 	{
 		public:
 			static void Init();

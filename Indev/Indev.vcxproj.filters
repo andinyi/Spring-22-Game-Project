@@ -36,6 +36,33 @@
     <ClInclude Include="specificGLFW\GlfwWindow.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Sprite.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SpriteImplementation.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="specificOpenGL\OpenGLSprite.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Shader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ShaderImplementation.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="specificOpenGL\OpenGLShader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Renderer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="specificOpenGL\OpenGLRenderer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="specificOpenGL\RendererImplementation.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="IndevApp.cpp">
@@ -48,6 +75,24 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="specificGLFW\GlfwWindow.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Sprite.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="specificOpenGL\OpenGLSprite.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Shader.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="specificOpenGL\OpenGLShader.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Renderer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="specificOpenGL\OpenGLRenderer.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

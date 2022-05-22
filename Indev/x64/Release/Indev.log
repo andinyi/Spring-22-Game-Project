@@ -1,8 +1,14 @@
-﻿  GlfwWindow.cpp
+﻿  IndevApp.cpp
+C:\Users\handy\source\repos\Spring22\Indev\IndevApp.h(16,29): warning C4251: 'Indev::IndevApp::mFrameDuration': class 'std::chrono::duration<__int64,std::milli>' needs to have dll-interface to be used by clients of class 'Indev::IndevApp'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\chrono(539): message : see declaration of 'std::chrono::duration<__int64,std::milli>'
+C:\Users\handy\source\repos\Spring22\Indev\IndevApp.h(17,41): warning C4251: 'Indev::IndevApp::mNextFrameTime': class 'std::chrono::time_point<std::chrono::steady_clock,std::chrono::nanoseconds>' needs to have dll-interface to be used by clients of class 'Indev::IndevApp'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\chrono(701): message : see declaration of 'std::chrono::time_point<std::chrono::steady_clock,std::chrono::nanoseconds>'
+C:\Users\handy\source\repos\Spring22\Indev\IndevApp.cpp(27,47): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\handy\source\repos\Spring22\Indev\IndevApp.cpp(19,15): warning C4101: 'window': unreferenced local variable
      Creating library C:\Users\handy\source\repos\Spring22\x64\Release\Indev.lib and object C:\Users\handy\source\repos\Spring22\x64\Release\Indev.exp
   Generating code
-  1 of 99 functions ( 1.0%) were compiled, the rest were copied from previous compilation.
+  1 of 456 functions ( 0.2%) were compiled, the rest were copied from previous compilation.
     0 functions were new in current compilation
-    0 functions had inline decision re-evaluated but remain unchanged
+    10 functions had inline decision re-evaluated but remain unchanged
   Finished generating code
   Indev.vcxproj -> C:\Users\handy\source\repos\Spring22\x64\Release\Indev.dll

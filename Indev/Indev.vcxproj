@@ -120,10 +120,11 @@
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>INDEV_LIB;INDEV_DEBUG</PreprocessorDefinitions>
+      <PreprocessorDefinitions>INDEV_LIB;INDEV_OPENGL;INDEV_WINDOWS;INDEV_DEBUG;</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>;$(SolutionDir)glad\include;C:\Users\handy\source\repos\Spring22\stbi;$(SolutionDir)Indev\specificOpenGL</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -136,11 +137,11 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>INDEV_LIB;INDEV_DEBUG;INDEV_WINDOWS</PreprocessorDefinitions>
+      <PreprocessorDefinitions>INDEV_LIB;INDEV_OPENGL;INDEV_WINDOWS;INDEV_DEBUG;INDEV_WINDOWS</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>$(SolutionDir)glfw\include;$(SolutionDir)Indev;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)glfw\include;$(SolutionDir)Indev;%(AdditionalIncludeDirectories);$(SolutionDir)glad\include;C:\Users\handy\source\repos\Spring22\stbi;$(SolutionDir)Indev\specificOpenGL</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
@@ -156,7 +157,16 @@
     <ClInclude Include="IndevApp.h" />
     <ClInclude Include="IndevUtility.h" />
     <ClInclude Include="pch.h" />
+    <ClInclude Include="Renderer.h" />
+    <ClInclude Include="Shader.h" />
+    <ClInclude Include="ShaderImplementation.h" />
     <ClInclude Include="specificGLFW\GlfwWindow.h" />
+    <ClInclude Include="specificOpenGL\OpenGLRenderer.h" />
+    <ClInclude Include="specificOpenGL\OpenGLShader.h" />
+    <ClInclude Include="specificOpenGL\OpenGLSprite.h" />
+    <ClInclude Include="specificOpenGL\RendererImplementation.h" />
+    <ClInclude Include="Sprite.h" />
+    <ClInclude Include="SpriteImplementation.h" />
     <ClInclude Include="WindowImplementation.h" />
   </ItemGroup>
   <ItemGroup>
@@ -168,11 +178,23 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="Renderer.cpp" />
+    <ClCompile Include="Shader.cpp" />
     <ClCompile Include="specificGLFW\GlfwWindow.cpp" />
+    <ClCompile Include="specificOpenGL\OpenGLRenderer.cpp" />
+    <ClCompile Include="specificOpenGL\OpenGLShader.cpp" />
+    <ClCompile Include="specificOpenGL\OpenGLSprite.cpp" />
+    <ClCompile Include="Sprite.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\glad\glad.vcxproj">
+      <Project>{ffd6b3ce-1d89-4b8f-86d2-4bbd0e037bb2}</Project>
+    </ProjectReference>
     <ProjectReference Include="..\glfw\build\src\glfw.vcxproj">
       <Project>{dddbe5c6-5586-367f-a437-dce9e17c5502}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\stbi\stbi.vcxproj">
+      <Project>{11196912-73df-4f13-96dd-4156c25dd2c7}</Project>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

@@ -22,6 +22,10 @@ namespace Indev
 		}
 
 		glfwMakeContextCurrent(mGlfwWindow);
+		glfwSwapInterval(1);
+
+		if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress))
+			INDEV_LOG("Glad failed to initialize");
 
 		return true;
 	}

@@ -1,0 +1,10 @@
+# S22_Handy_Ni
+
+unique elements for game engine class
+- a score tracker than goes up to 99 for the Flappy Bird Game on the lower left.
+- Pipe Generation and collison
+- Background 
+- Gravity and Falling
+- Currently Doesnt die when you fall through the screen though 
+- Start Screen
+- Really flushed out game very similar to the actual Flappy Birds Release

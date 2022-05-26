@@ -1,5 +1,9 @@
 # S22_Handy_Ni
 
+PRESS SPACE TO PLAY 
+
+PRESS SPACE TO PLAY 
+
 unique elements for game engine class
 - a score tracker than goes up to 99 for the Flappy Bird Game on the lower left.
 - Pipe Generation and collison
@@ -8,3 +12,7 @@ unique elements for game engine class
 - Currently Doesnt die when you fall through the screen though 
 - Start Screen
 - Really flushed out game very similar to the actual Flappy Birds Release
+
+PRESS SPACE TO PLAY 
+PRESS SPACE TO PLAY 
+PRESS SPACE TO PLAY 

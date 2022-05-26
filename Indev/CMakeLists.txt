@@ -14,6 +14,8 @@ set(HEADER_FILES
 	specificOpenGL/OpenGLSprite.h
 	specificOpenGL/OpenGLShader.h
 	specificOpenGL/OpenGLRenderer.h
+	Events.h
+	KeyCodes.h
 	)
 
 set(SOURCE_FILES
@@ -26,6 +28,7 @@ set(SOURCE_FILES
 	specificOpenGL/OpenGLSprite.cpp
 	specificOpenGL/OpenGLShader.cpp
 	specificOpenGL/OpenGLRenderer.cpp
+	Events.cpp
 	)
 
 add_library(Indev SHARED ${HEADER_FILES} ${SOURCE_FILES})
@@ -42,3 +45,7 @@ include_directories(../glad/include)
 target_precompile_headers(Indev PRIVATE pch.h)
 
 target_link_libraries(Indev glfw glad stbi)
+
+file(COPY Assets DESTINATION ${PROJECT_BINARY_DIR}/Indev)
+file(COPY Assets DESTINATION ${PROJECT_BINARY_DIR}/Debug)
+file(COPY Assets DESTINATION ${PROJECT_BINARY_DIR}/Release)

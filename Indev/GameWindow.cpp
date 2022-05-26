@@ -18,7 +18,7 @@ Indev::GameWindow* Indev::GameWindow::GetWindow()
 
 bool Indev::GameWindow::CreateWindow(int x, int y, const std::string& windowName)
 {
-	return newWindow->CreateWindow(800, 600, "Spring 2022");
+	return newWindow->CreateWindow(800, 512, "Spring 2022");
 }
 
 void Indev::GameWindow::SwapBuffers()
@@ -39,6 +39,16 @@ int Indev::GameWindow::GetWidth() const
 int Indev::GameWindow::GetHeight() const
 {
 	return newWindow->GetHeight();
+}
+
+void Indev::GameWindow::SetKeyPressedCallback(const std::function<void(const KeyPressedEvent&)>& keyPressedCallback)
+{
+	newWindow->SetKeyPressedCallback(keyPressedCallback);
+}
+
+void Indev::GameWindow::SetKeyReleasedCallback(const std::function<void(const KeyReleasedEvent&)>& keyReleasedCallback)
+{
+	newWindow->SetKeyReleasedCallback(keyReleasedCallback);
 }
 
 Indev::GameWindow::GameWindow() 

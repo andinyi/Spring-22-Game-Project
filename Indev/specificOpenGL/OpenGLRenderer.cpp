@@ -13,6 +13,8 @@ namespace Indev
 		shader.Bind();
 		picture.Bind();
 
+		//picture.Rotate(-100); //try to implement a rotate method, doesnt work so commenting out
+
 		shader.SetUniform2Ints("windowSize", winWidth, winHeight);
 		shader.SetUniform3Ints("spriteCoord", xPos, yPos, zPos);
 

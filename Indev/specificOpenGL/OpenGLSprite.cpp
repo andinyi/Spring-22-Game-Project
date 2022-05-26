@@ -74,6 +74,10 @@ namespace Indev
 	{
 		return mHeight;
 	}
+	void OpenGLSprite::Rotate(float rotate)
+	{
+		glRotatef(rotate, 1, 1, 1);
+	}
 	void OpenGLSprite::Bind()
 	{
 		glBindVertexArray(mVAO);

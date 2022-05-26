@@ -1,6 +1,7 @@
 #pragma once
 #include "WindowImplementation.h"
 #include "IndevUtility.h"
+#include "Events.h"
 
 namespace Indev 
 {
@@ -15,6 +16,9 @@ namespace Indev
 			void CollectEvents();
 			int GetWidth() const;
 			int GetHeight() const;
+
+			void SetKeyPressedCallback(const std::function<void(const KeyPressedEvent&)>& keyPressedCallback);
+			void SetKeyReleasedCallback(const std::function<void(const KeyReleasedEvent&)>& keyReleasedCallback);
 
 		private:
 			inline static GameWindow* instance { nullptr };

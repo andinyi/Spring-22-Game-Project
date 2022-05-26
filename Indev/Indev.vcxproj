@@ -152,24 +152,27 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Events.h" />
     <ClInclude Include="GameWindow.h" />
     <ClInclude Include="Indev.h" />
     <ClInclude Include="IndevApp.h" />
     <ClInclude Include="IndevUtility.h" />
+    <ClInclude Include="KeyCodes.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="Renderer.h" />
+    <ClInclude Include="RendererImplementation.h" />
     <ClInclude Include="Shader.h" />
     <ClInclude Include="ShaderImplementation.h" />
     <ClInclude Include="specificGLFW\GlfwWindow.h" />
     <ClInclude Include="specificOpenGL\OpenGLRenderer.h" />
     <ClInclude Include="specificOpenGL\OpenGLShader.h" />
     <ClInclude Include="specificOpenGL\OpenGLSprite.h" />
-    <ClInclude Include="specificOpenGL\RendererImplementation.h" />
     <ClInclude Include="Sprite.h" />
     <ClInclude Include="SpriteImplementation.h" />
     <ClInclude Include="WindowImplementation.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Events.cpp" />
     <ClCompile Include="GameWindow.cpp" />
     <ClCompile Include="IndevApp.cpp" />
     <ClCompile Include="pch.cpp">

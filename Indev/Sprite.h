@@ -13,6 +13,7 @@ namespace Indev
 		int GetHeight() const;
 
 		void Bind();
+		void Rotate(float rotate);
 	private:
 		SpriteImplementation* mImplementation; 
 	};

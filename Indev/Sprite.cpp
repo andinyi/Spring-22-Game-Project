@@ -24,4 +24,8 @@ namespace Indev
 	{
 		mImplementation->Bind();
 	}
+	void Sprite::Rotate(float rotate)
+	{
+		mImplementation->Rotate(rotate);
+	}
 }

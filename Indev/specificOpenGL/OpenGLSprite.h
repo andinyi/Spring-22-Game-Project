@@ -9,6 +9,7 @@ namespace Indev
 		OpenGLSprite(const std::string& filename);
 		virtual int GetWidth() const override;
 		virtual int GetHeight() const override;
+		virtual void Rotate(float rotate) override;
 		virtual void Bind() override;
 		virtual bool IsBound() const override;
 	

@@ -1,7 +1,4 @@
 #include "../Indev/Indev.h"
-
-class SpringApp : public Indev::IndevApp {
-
-};
+#include "SpringApp.h"
 
 INDEV_APPLICATION_START(SpringApp);

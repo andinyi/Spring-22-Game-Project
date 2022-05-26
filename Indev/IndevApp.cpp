@@ -7,12 +7,15 @@
 #include "Sprite.h"
 #include "Shader.h"
 #include "Renderer.h"
+#include "Events.h"
+#include "KeyCodes.h"
 
 namespace Indev
 {
-	void IndevApp::Run()
+
+	IndevApp::IndevApp()
 	{
-		INDEV_LOG("Currently running.."); 
+		INDEV_LOG("Currently running..");
 
 		Indev::GameWindow::Init();
 
@@ -21,27 +24,19 @@ namespace Indev
 		Indev::GameWindow::GetWindow()->CreateWindow(800, 600, "game window");
 
 		Renderer::Init();
+	}
 
-		Indev::Shader shader{ "../Indev/Assets/Shaders/defaultVertex.glsl", "../Indev/Assets/Shaders/defaultFragment.glsl"};
-		shader.SetUniform2Ints("windowSize", 800, 600);
-		shader.SetUniform3Ints("spriteCoord", 0, 0, 1.0);
-
-		//--------------------TEXTURES------------------------------------------------------------------------------------///
-		Indev::Sprite star{ "../Indev/Assets/Images/image.png" };
-
-		int xPos{ -star.GetWidth() };
-
+	void IndevApp::Run()
+	{
 		mNextFrameTime = std::chrono::steady_clock::now() + mFrameDuration;
 
 		while (true) 
 		{
-			OnUpdate();
-
 			Renderer::ClearScreen();
 
-			Renderer::Draw(star, xPos, 20, 1); 
+			OnUpdate();
 
-			xPos = (xPos + 5); // % (Indev::GameWindow::GetWindow()->GetWidth() + star.GetWidth()) - star.GetWidth();
+			 // % (Indev::GameWindow::GetWindow()->GetWidth() + star.GetWidth()) - star.GetWidth();
 
 			std::this_thread::sleep_until(mNextFrameTime);
 
@@ -54,5 +49,13 @@ namespace Indev
 	void IndevApp::OnUpdate()
 	{
 
+	}
+	void IndevApp::SetKeyPressedCallback(const std::function<void(const KeyPressedEvent&)>& keyPressedCallback)
+	{
+		GameWindow::GetWindow()->SetKeyPressedCallback(keyPressedCallback);
+	}
+	void IndevApp::SetKeyReleasedCallback(const std::function<void(const KeyReleasedEvent&)>& keyReleasedCallback)
+	{
+		GameWindow::GetWindow()->SetKeyReleasedCallback(keyReleasedCallback);
 	}
 }

@@ -9,6 +9,6 @@ namespace Indev
 		virtual int GetHeight() const = 0;
 		virtual void Bind() = 0;
 		virtual bool IsBound() const = 0;
-
+		virtual void Rotate(float rotate) = 0;
 	};
 }
